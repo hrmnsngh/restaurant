@@ -14,7 +14,6 @@ export class ItemCardComponent implements OnInit {
   constructor() { }
 
   Rate(){
-    console.log('inside rating');
     let starFilled = '<span class="glyphicon glyphicon-star"></span>';
     let starEmpty = '<span class="glyphicon glyphicon-star-empty"></span>';
     for(let i=0;i<this.rating; i++){
@@ -24,7 +23,6 @@ export class ItemCardComponent implements OnInit {
       this.starRating+= starEmpty;
     }
     this.starRating+=this.rating;
-    console.log(this.starRating);
   }
 
   ngOnInit() {
