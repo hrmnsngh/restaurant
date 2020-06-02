@@ -1,7 +1,8 @@
-<div class="card"  style="width: 20vw; height:350px ; border: 1px solid grey; border-radius: 5px; margin: 5px;">
+<div class="card"  style="width: 20vw; height:330px ; border: 1px solid grey; border-radius: 5px; margin: 5px;">
   <img class="card-img-top" height="150px" width="100%" [src]="restaurantData.image_url" alt="Card image cap">
   <div class="card-body" style="margin: 3px;">
-    <div class="card-title " style="font-weight: bolder;">{{restaurantData.title}}
+    <div class="card-title " style="font-weight: bolder; font-size:large;">
+    {{(restaurantData.title.length > 10)? (restaurantData.title | slice:0:10) +'...':restaurantData.title }}
     &nbsp;
       <label class="pull-right" id="rating"style="font-size: small;" [innerHTML]="starRating">{{rating}}</label><!-- 
       <span class="glyphicon glyphicon-star" *ngFor="let let i of [].constructor(rating)"></span>
@@ -10,8 +11,10 @@
     <p class="card-text">{{restaurantData.description}}</p>
     <p class="card-text" style="font-size: small;">{{restaurantData.branches}}</p>
 
-    <p class="card-text" style="font-size: small;">{{restaurantData.offer}}</p>
-    <div class="row" >
+    <p class="card-text" style="font-size:x-small;">{{restaurantData.offer}}</p>
+
+    
+    <div class="row">
       <div class="col-sm-6">
         <span class="glyphicon glyphicon-heart" ></span>
       </div>
