@@ -1,0 +1,5 @@
+<div class="container">
+    <div *ngFor="let item of restList">
+        <app-item-card [restaurantData]="item.collection" class="col-sm-3"></app-item-card>
+    </div>
+</div>
